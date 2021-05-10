@@ -1,5 +1,5 @@
 # roam-hook
-用hook实现点击roam research网址直接在已打开的roam research网页中打开.
+用 [hook](https://hookproductivity.com) 实现点击roam research网址直接在已打开的roam research网页(chrome)中打开.
 
 说明: 打开 hook 设置, 将 hook.scpt 中的内容拷贝到脚本, 如下图:
 
