@@ -11,7 +11,7 @@ set targetURL to replace_chars("$0", "//", "/")
 
 set windowIndex to 1
 set tabindex to 0
-set searchString to "roamresearch.com/#/app/"
+set searchString to "https://roamresearch.com/#/"
 set allWindowsTabURLList to ""
 set allWindowsTabTitlesList to ""
 set allWindowsList to ""
