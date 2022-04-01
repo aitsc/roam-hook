@@ -108,7 +108,12 @@ if found is not true then
 	end repeat
 end if
 if not found then
-	display dialog "请先在 google chrome 中打开一个对应的 roam research graph 页面."
-	error number -128
+	tell application "Google Chrome"
+	  activate
+	  open location targetURL
+	  delay 1
+	  activate
+	end tell
+else
+    goToChromePage(foundWindow, targetURL, tabindex)
 end if
-goToChromePage(foundWindow, targetURL, tabindex)
