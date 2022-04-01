@@ -7,11 +7,19 @@ on replace_chars(this_text, search_string, replacement_string)
 	return this_text
 end replace_chars
 
+on theSplit(theString, theDelimiter)
+    set oldDelimiters to AppleScript's text item delimiters
+    set AppleScript's text item delimiters to theDelimiter
+    set theArray to every text item of theString
+    set AppleScript's text item delimiters to oldDelimiters
+    return theArray
+end theSplit
+
 set targetURL to replace_chars("$0", "//", "/")
 
 set windowIndex to 1
 set tabindex to 0
-set searchString to "https://roamresearch.com/#/"
+set searchString to (item 1 of theSplit(targetURL, "/page"))
 set allWindowsTabURLList to ""
 set allWindowsTabTitlesList to ""
 set allWindowsList to ""
@@ -100,6 +108,7 @@ if found is not true then
 	end repeat
 end if
 if not found then
-	display dialog "请先在 google chrome 中打开一个 roam research 网站."
+	display dialog "请先在 google chrome 中打开一个对应的 roam research graph 页面."
+	error number -128
 end if
 goToChromePage(foundWindow, targetURL, tabindex)
