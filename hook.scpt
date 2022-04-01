@@ -15,7 +15,7 @@ on theSplit(theString, theDelimiter)
     return theArray
 end theSplit
 
-set targetURL to replace_chars("$0", "//", "/")
+set targetURL to replace_chars("$0", ":////", "://")
 
 set windowIndex to 1
 set tabindex to 0
