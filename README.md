@@ -5,7 +5,7 @@
 
 ![](intro.png)
 
-然后就可以直接打开链接如: hook://https://roamresearch.com/#/app/...
+然后就可以直接打开链接如: hook://https/roamresearch.com/#/app/...
 
 比如可以在endnote中直接点击进入对应的roam笔记:
 
